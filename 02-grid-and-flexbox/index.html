@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox and Grid</title>
+    <link rel="stylesheet" href="../common/css/base-styles.css"/>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../common/fav-icon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../common/fav-icon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../common/fav-icon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../common/fav-icon/site.webmanifest" />
+  </head>
+  <body>
+    <header>
+      <div class="title">Flexbox and Grid</div>
+      <div class="button-group">
+        <a href="" class="box-button">Home</a>
+        <a
+          href="https://github.com/normansywang?tab=repositories"
+          target="_blank"
+          class="box-button"
+          >Projects</a
+        >
+        <a
+          href="https://www.linkedin.com/in/shengyu-wang-69801b1b2/"
+          target="_blank"
+          class="box-button"
+          >About</a
+        >
+      </div>
+    </header>
+    <main class="grid-container">
+      <div class="box-about card">
+        <div class="card-icon"><img src="../common/img/profile-pic.png" /></div>
+        <div class="card-name">Norman</div>
+        <div class="card-date">6d ago</div>
+        <div class="card-title">About this page</div>
+        <div class="card-content">
+          <p>This page has two major parts: the header and the main content.</p>
+          <p>
+            The header is using Flexbox to organise the layout of title and the
+            buttons.
+          </p>
+          <p>
+            The main content is using a Grid container to organise the cards,
+            and the content inside cards separately.
+          </p>
+        </div>
+        <div class="button-group">
+          <button class="like-button">
+            <img src="../common/img/favorite-filled.png" />
+            <span>126</span>
+          </button>
+
+          <button class="comment-button">
+            <img src="../common/img/comment-filled.png" />
+            <span>55</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="box-intro card">
+        <div class="card-icon"><img src="../common/img/profile-pic.png" /></div>
+        <div class="card-name">Norman</div>
+        <div class="card-date">1w ago</div>
+        <div class="card-title">From Norman</div>
+        <div class="card-content">
+          <p>Hi! My name is Shengyu Wang, you can also call me Norman.</p>
+          <p>
+            I'm an Application Developer who are always interested in learning
+            new things!
+          </p>
+          <p>
+            Recently I did some research and found some interesting online
+            courses about CSS Flexbox and Grids.
+          </p>
+          <p>
+            I found that Flexbox and Grids are so useful for developing layouts,
+            so I tried to build this demo webpage with what I have learned from
+            the courses.
+          </p>
+        </div>
+        <div class="button-group">
+          <button class="like-button">
+            <img src="../common/img/favorite-filled.png" />
+            <span>236</span>
+          </button>
+
+          <button class="comment-button">
+            <img src="../common/img/comment-filled.png" />
+            <span>81</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="box-quote-flexbox card">
+        <div class="card-icon"><img src="../common/img/profile-pic.png" /></div>
+        <div class="card-name">Norman</div>
+        <div class="card-date">10d ago</div>
+        <div class="card-title">Flexbox</div>
+        <div class="card-content">
+          <p>
+            Flexbox is a one-dimensional layout method for arranging items in
+            rows or columns.
+          </p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox"
+            target="_blank"
+          >
+            Learn More
+          </a>
+        </div>
+        <div class="button-group">
+          <button class="like-button">
+            <img src="../common/img/favorite-filled.png" />
+            <span>301</span>
+          </button>
+
+          <button class="comment-button">
+            <img src="../common/img/comment-filled.png" />
+            <span>66</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="box-quote-grid card">
+        <div class="card-icon"><img src="../common/img/profile-pic.png" /></div>
+        <div class="card-name">Norman</div>
+        <div class="card-date">10d ago</div>
+        <div class="card-title">Grids</div>
+        <div class="card-content">
+          <p>
+            CSS Grids Layout is a two-dimensional layout system for the web. It
+            lets you lay content out in rows and columns.
+          </p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids"
+            target="_blank"
+          >
+            Learn More
+          </a>
+        </div>
+        <div class="button-group">
+          <button class="like-button">
+            <img src="../common/img/favorite-filled.png" />
+            <span>189</span>
+          </button>
+
+          <button class="comment-button">
+            <img src="../common/img/comment-filled.png" />
+            <span>90</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="box-tips card">
+        <div class="card-icon"><img src="../common/img/profile-pic.png" /></div>
+        <div class="card-name">Norman</div>
+        <div class="card-date">1m ago</div>
+        <div class="card-title">Small Tips</div>
+        <div class="card-content">
+          <ol>
+            <li>
+              This page is designed as a responsive page, you may adjust the
+              page width to see some changes of the layout.
+            </li>
+            <li>
+              You may also want to inspect the page for more information. (Right
+              Click the page and select "Inspect"!)
+            </li>
+          </ol>
+        </div>
+        <div class="button-group">
+          <button class="like-button">
+            <img src="../common/img/favorite-filled.png" />
+            <span>223</span>
+          </button>
+
+          <button class="comment-button">
+            <img src="../common/img/comment-filled.png" />
+            <span>10</span>
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

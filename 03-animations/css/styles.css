@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+:root {
+    --accent-orange: #ef8330;
+    --accent-pink: #f6765d;
+}
+
+* {
+   color: #fff;
+}
+
+header {
+    background: var(--accent-orange);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    gap: 20px;
+}
+
+.transform-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.transform-group .description {
+    color: #444;
+}
+
+.transform-group .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    font-size: 1rem;
+    background: var(--accent-pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--box-border-radius);
+    box-shadow: var(--box-shadow)
+}
+
+.transform-group .box {
+    transition: 0.5s ease-in-out 0.1s;
+}
+
+.rotate-box:hover {
+    transform: rotate(1turn);
+}
+
+.scale-box:hover {
+    transform: scale(1.3);
+}
+
+.translate-box:hover {
+    transform: translate(-30%);
+}
+
+.skew-box:hover {
+    transform: skew(10deg);
+}
+
+.animation-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 250px;
+    background: var(--accent-orange);
+    border-radius: var(--box-border-radius);
+    position: relative;
+    margin-top: 30px;
+}
+
+.animation-group .decription {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.animation-group .box {
+    border: 1px solid #fff;
+    box-shadow: none;
+    animation: circulation 4s ease-in-out forwards;
+    animation-iteration-count: infinite;
+}
+
+.animation-group:hover .box {
+    animation-play-state: paused;
+}
+
+@keyframes circulation {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(100%) rotate(90deg);
+    }
+
+    40% {
+        transform: translateX(100%) translateY(50%) rotate(180deg);
+    }
+
+    60% {
+        transform: translateX(-100%) translateY(50%) rotate(360deg);
+    }
+
+    80% {
+        transform: translateX(-100%) translateY(0) rotate(90deg);
+    }
+
+    100% {
+        transform: translateX(0) rotate(360deg);
+    }
+}
+
+
+@media (min-width: 600px) {
+    .animation-group {
+        width: 60%;
+    }
+}

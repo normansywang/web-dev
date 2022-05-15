@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+:root {
+  --pri-color: #f6765d;
+  --sec-color: #fff;
+}
+
+* {
+  color: var(--sec-color);
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+li {
+    margin-left: 20px;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--sec-color);
+}
+
+header {
+  background: var(--pri-color);
+}
+
+
+
+main {
+  width: 100%;
+  min-height: 100%;
+}
+
+/* main grid container layout */
+.grid-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.grid-container .box-about {
+  grid-area: box-about;
+}
+
+.grid-container .box-intro {
+  grid-area: box-intro;
+  order: -1;
+}
+
+.grid-container .box-quote-flex {
+  grid-area: box-flex;
+}
+
+.grid-container .box-quote-grid {
+  grid-area: box-quote-grid;
+}
+
+.grid-container .box-tips {
+  grid-area: box-tips;
+}
+
+/* card layout */
+.grid-container .card {
+  background-color: var(--pri-color);
+  border-radius: var(--box-border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 15px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto auto 1fr auto;
+  grid-template-areas:
+    "card-icon card-name"
+    "card-icon card-date"
+    "card-title card-title"
+    "card-content card-content"
+    "button-group button-group";
+}
+
+.grid-container .card .card-icon {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: var(--glass-background);
+  cursor: pointer;
+  border-radius: 5px;
+  grid-area: card-icon;
+  justify-self: start;
+}
+
+.grid-container .card .card-icon:hover {
+  background: var(--glass-background-hover);
+}
+
+.grid-container .card .card-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.grid-container .card .card-name {
+  grid-area: card-name;
+  font-size: 1.1rem;
+}
+
+.grid-container .card .card-date {
+  grid-area: card-date;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.grid-container .card .card-title {
+  grid-area: card-title;
+  font-size: 1.2rem;
+  border-bottom: 1px dashed #fff;
+  padding-bottom: 5px;
+}
+
+.grid-container .card .card-content {
+  grid-area: card-content;
+}
+
+.grid-container .card .button-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  grid-area: button-group;
+}
+
+.grid-container .card .button-group button {
+  border: none;
+  background: var(--glass-background);
+  border-radius: 6px;
+  padding: 3px 10px;
+  width: auto;
+  height: 25px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.grid-container .card .button-group button:hover {
+  background: var(--glass-background-hover);
+}
+
+.grid-container .card .button-group button img {
+  width: auto;
+  height: 100%;
+}
+
+@media (min-width: 500px) {
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "box-intro box-intro"
+      "box-about box-about"
+      "box-quote-flex box-quote-grid"
+      "box-tips box-tips";
+  }
+}
+
+@media (min-width: 1000px) {
+  .grid-container {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+      "box-intro box-about box-about "
+      "box-intro box-quote-flex box-quote-grid"
+      "box-tips box-tips box-tips";
+  }
+}

@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+:root {
+  --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  --box-border-radius: 10px;
+
+  --glass-background: rgba(255, 255, 255, 0.2);
+  --glass-background-hover: rgba(255, 255, 255, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.2s;
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+  background: var(--glass-background);
+  border-radius: 3px;
+  padding: 1px 3px;
+}
+
+a:hover {
+  background: var(--glass-background-hover);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  gap: 20px;
+  border-radius: 0px 0px 30px 30px;
+  position: sticky;
+  top: 0;
+  border-bottom: 2px solid #fff;
+  z-index: 1;
+}
+
+header .title {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+header .box-button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: var(--box-border-radius);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+header .box-button:hover {
+  background-color: var(--glass-background-hover);
+}
+
+@media (min-width: 500px) {
+  header {
+    flex-direction: row;
+    border-radius: 0px 0px 0px 50px;
+  }
+}
