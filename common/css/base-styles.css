@@ -22,6 +22,7 @@ a {
   background: var(--glass-background);
   border-radius: 3px;
   padding: 1px 3px;
+  cursor: pointer;
 }
 
 a:hover {

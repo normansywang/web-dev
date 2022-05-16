@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+:root {
+    --default-text-color: #fff;
+}
+
+* {
+   color: var(--default-text-color);
+}
+
+header * {
+    color: #fff;
+}
+
+header {
+    border: none;
+}
+
+header:hover {
+    background: var(--glass-background);
+}
+
+header .button-group .box-button.active {
+    background: var(--glass-background);
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(45deg, #f5503b, #7577f0);
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+}
+
+main .intro {
+    grid-area: intro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--glass-background);
+    border-radius: var(--box-border-radius);
+    padding: 20px;
+}
+
+main .intro .profile-pic {
+    width: 150px;
+    height: 150px;
+}
+
+main .intro .profile-pic img {
+    width: 100%;
+    height: 100%;
+}
+
+main .intro .greeting {
+    grid-area: greeting;
+    font-size: 1.2rem;
+}
+
+main .find-me {
+    grid-area: find-me;
+    background: var(--glass-background);
+    border-radius: var(--box-border-radius);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+main .find-me .media-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+main .find-me .media-buttons a {
+    width: 50px;
+    height: 50px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main .find-me .media-buttons a.linkedin {
+    background-image: url("common/img/icon-linkedin.png");
+}
+
+main .find-me .media-buttons a.github {
+    background-image: url("common/img/icon-github.png");
+}
+
+
+main .projects {
+    grid-area: projects;
+    background: var(--glass-background);
+    border-radius: var(--box-border-radius);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+main .projects .project-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+main .description {
+    font-size: 1.4rem;
+}
+
+@media (min-width: 1000px) {
+    main {
+        width: 80%;
+        margin: auto auto;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-areas: 
+            "intro find-me"
+            "intro projects";
+    }
+
+    main .intro {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
