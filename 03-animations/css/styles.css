@@ -33,6 +33,7 @@ body {
 
 .transform-group .description {
     color: #444;
+    margin: 0px 30px;
 }
 
 .transform-group .container {
