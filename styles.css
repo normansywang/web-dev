@@ -120,7 +120,7 @@ main .project-links {
     flex-wrap: wrap;
 }
 
-main .react-projects {
+main .react-web {
     grid-area: react-projects;
 }
 
