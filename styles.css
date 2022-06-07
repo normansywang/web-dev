@@ -41,6 +41,7 @@ main {
 main .intro {
     grid-area: intro;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: var(--glass-background);
@@ -96,9 +97,11 @@ main .find-me .media-buttons a.github {
     background-image: url("common/img/icon-github.png");
 }
 
+main .static-web {
+    grid-area: static-projects;
+}
 
 main .projects {
-    grid-area: projects;
     background: var(--glass-background);
     border-radius: var(--box-border-radius);
     padding: 20px;
@@ -109,12 +112,16 @@ main .projects {
     gap: 20px;
 }
 
-main .projects .project-links {
+main .project-links {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
+}
+
+main .react-projects {
+    grid-area: react-projects;
 }
 
 main .description {
@@ -124,12 +131,12 @@ main .description {
 @media (min-width: 1000px) {
     main {
         width: 80%;
-        margin: auto auto;
+        margin: 50px auto;
         display: grid;
-        grid-template-columns: auto 1fr;
+        grid-template-columns: auto auto auto;
         grid-template-areas: 
-            "intro find-me"
-            "intro projects";
+            "intro find-me react-projects"
+            "intro static-projects static-projects";
     }
 
     main .intro {
