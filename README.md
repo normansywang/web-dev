@@ -43,7 +43,7 @@ There is a infinite rotation animation for the lower part of the page. Please ho
 
 [Click to view the page](https://normansywang.github.io/web-dev/03-animations/)
 
-###
+### 04-modal
 The 4th sub project is a demonstration of modal and two-factor authentication verification. 
 
 Click the button to show a modal, and input 6-digit codes to simulate the verification process.
