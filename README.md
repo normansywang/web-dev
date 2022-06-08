@@ -42,3 +42,10 @@ I tried with different functions in CSS transition and transform on the colored 
 There is a infinite rotation animation for the lower part of the page. Please hover on the section to pause the animation.
 
 [Click to view the page](https://normansywang.github.io/web-dev/03-animations/)
+
+###
+The 4th sub project is a demonstration of modal and two-factor authentication verification. 
+
+Click the button to show a modal, and input 6-digit codes to simulate the verification process.
+
+[Click to view the page](https://normansywang.github.io/web-dev/04-modal/)
