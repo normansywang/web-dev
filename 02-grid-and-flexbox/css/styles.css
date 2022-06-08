@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
 
 :root {
   --pri-color: #f6765d;
@@ -18,7 +17,6 @@ li {
 }
 
 body {
-  min-height: 100vh;
   background: var(--sec-color);
 }
 
@@ -26,12 +24,6 @@ header {
   background: var(--pri-color);
 }
 
-
-
-main {
-  width: 100%;
-  min-height: 100%;
-}
 
 /* main grid container layout */
 .grid-container {

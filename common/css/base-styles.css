@@ -17,6 +17,15 @@
   cursor: default;
 }
 
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
 a {
   text-decoration: none;
   background: var(--glass-background);
@@ -28,6 +37,11 @@ a {
 a:hover {
   background: var(--glass-background-hover);
 }
+
+button:hover {
+  cursor: pointer;
+}
+
 
 header {
   display: flex;
@@ -62,6 +76,15 @@ header .box-button {
 
 header .box-button:hover {
   background-color: var(--glass-background-hover);
+}
+
+.box {
+  border-radius: var(--box-border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.center {
+  text-align: center;
 }
 
 @media (min-width: 500px) {

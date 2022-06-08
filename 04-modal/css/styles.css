@@ -1,0 +1,141 @@
+:root {
+  --pri-color: #107c9a;
+  --sec-color: #fff;
+}
+
+* {
+  color: var(--sec-color);
+}
+
+body {
+  background: var(--sec-color);
+}
+
+header {
+  background: var(--pri-color);
+}
+
+main {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-grow: 1;
+}
+
+main button {
+  background-color: var(--pri-color);
+  font-size: 1rem;
+  padding: 1rem;
+  outline: none;
+  border: none;
+}
+
+main #confirmMsg {
+  background-color: var(--pri-color);
+  padding: 20px 30px;
+  display: none;
+}
+
+main #confirmMsg.show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.overlay.show {
+  display: flex;
+}
+
+.overlay .modal {
+  padding: 30px;
+  background-color: var(--pri-color);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 80%;
+}
+
+.overlay .modal .close {
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.overlay .modal button {
+  background: var(--sec-color);
+  color: var(--pri-color);
+  outline: none;
+  border: none;
+  padding: 10px;
+  width: 50%;
+}
+
+.overlay .modal button.close {
+  background: url(../../common/img/close.png) no-repeat;
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+}
+
+.code-verification {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.code-verification .code-input {
+  color: var(--sec-color);
+  font-size: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.code-verification .code-input input {
+  font-size: 2rem;
+  color: var(--pri-color);
+  background-color: var(--sec-color);
+  border: 3px solid var(--pri-color);
+  outline: none;
+  width: 2rem;
+  text-align: center;
+}
+
+#verify-message {
+  display: none;
+}
+
+#verify-message.show {
+  display: block;
+  text-decoration: underline;
+}
+
+@media (min-width: 800px) {
+  .overlay .modal {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .overlay .modal {
+    width: 40%;
+  }
+}

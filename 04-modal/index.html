@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <link rel="stylesheet" href="../common/css/base-styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../common/fav-icon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../common/fav-icon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../common/fav-icon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../common/fav-icon/site.webmanifest" />
+  </head>
+  <body>
+    <header>
+      <div class="title">Modal</div>
+      <div class="button-group">
+        <a href="../" class="box-button">Home</a>
+        <a
+          href="https://github.com/normansywang?tab=repositories"
+          target="_blank"
+          class="box-button"
+          >Projects</a
+        >
+        <a
+          href="https://www.linkedin.com/in/shengyu-wang-69801b1b2/"
+          target="_blank"
+          class="box-button"
+          >About</a
+        >
+      </div>
+    </header>
+    <main>
+      <div id="confirmMsg"><img src="../common/img/verified.png" alt="verified"/><p>Your email is verified!</p></div>
+      <button class="box" id="showModalBtn">Send verification email</button>
+    </main>
+
+    <div class="overlay" id="overlay">
+      <div class="modal box">
+        <button class="close"></button>
+        <p>A verification code was sent to your email. <br>Please enter the code to activate your account:</p>
+        
+        <form class="code-verification" id="verification-form">
+          <section class="code-input">
+            <input id="code-1" type="text" maxlength="1"/>
+            <input id="code-2" type="text" maxlength="1"/>
+            <input id="code-3" type="text" maxlength="1"/>
+            -
+            <input id="code-4" type="text" maxlength="1"/>
+            <input id="code-5" type="text" maxlength="1"/>
+            <input id="code-6" type="text" maxlength="1"/>
+          </section>
+          <p id="verify-message">Incorrect verification code.</p>
+          <button class="box" type="submit" id="verifyBtn">Verify</button>
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript" src="./js/script.js"></script>
+  </body>
+</html>
